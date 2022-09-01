@@ -2,7 +2,7 @@ ThisBuild / version := "0.1.0-SNAPSHOT"
 
 ThisBuild / scalaVersion := "2.13.8"
 
-val zioVersion = "2.0.0"
+val zioVersion = "2.0.1"
 val sttpVersion = "3.7.4"
 val sttpClientVersion = "3.7.4"
 
@@ -15,8 +15,8 @@ lazy val sharedSettings = Seq(
     "io.d11" %% "zhttp" % "2.0.0-RC10",
     "com.softwaremill.sttp.client3" %% "core" % sttpClientVersion,
     "com.softwaremill.sttp.client3" %% "zio" % sttpClientVersion,
-    "com.softwaremill.sttp.client3" %% "zio" % sttpVersion,
     "com.softwaremill.sttp.client3" %% "slf4j-backend" % sttpVersion,
+    "com.softwaremill.sttp.client3" %% "zio-json" % sttpClientVersion,
     "dev.zio" %% "zio-json" % "0.3.0-RC10",
   ),
 )
