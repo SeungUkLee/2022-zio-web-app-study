@@ -69,3 +69,4 @@ jitwatch.out
 project/**/metals.sbt
 
 .bsp
+target
