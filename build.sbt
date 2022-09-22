@@ -37,3 +37,5 @@ lazy val ch3 = project
 
 lazy val ch4 = project
   .settings(sharedSettings)
+
+lazy val ch5 = project.settings()
