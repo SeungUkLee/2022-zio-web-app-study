@@ -21,6 +21,22 @@ lazy val sharedSettings = Seq(
   ),
 )
 
+val V = new {
+  val zio = "2.0.2"
+  val sttp = "3.8.0"
+}
+
+lazy val liveDemoSettings = Seq(
+  libraryDependencies ++= Seq(
+    "dev.zio" %% "zio" % V.zio,
+    "com.softwaremill.sttp.client3" %% "zio" % V.sttp,
+    "com.softwaremill.sttp.client3" %% "zio-json" % V.sttp,
+    "io.d11" %% "zhttp" % "2.0.0-RC11",
+    "dev.zio" %% "zio-test" % V.zio % Test,
+    "dev.zio" %% "zio-test-sbt" % V.zio % Test,
+  )
+)
+
 lazy val root = (project in file("."))
   .settings(
     name := "2022-zio-web-study"
@@ -39,3 +55,6 @@ lazy val ch4 = project
   .settings(sharedSettings)
 
 lazy val ch5 = project.settings()
+
+lazy val ch6 = project
+  .settings(liveDemoSettings)
